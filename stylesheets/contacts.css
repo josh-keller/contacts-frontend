@@ -1,0 +1,163 @@
+html {
+  font-family: sans-serif;
+  font-size: 18px;
+}
+
+body {
+  max-width: 1200px;
+  background-color: #f0f0f0;
+}
+
+header {
+  text-align: center;
+  padding: 1em;
+  width: 100%;
+  background-color: #aabbee;
+}
+
+input, select {
+  font-size: 1rem;
+  padding: .5rem 1rem;
+}
+
+button {
+  font-size: 1rem;
+  padding: .5rem 1rem;
+  margin-left: 2rem;
+}
+
+label[for="search"] {
+  position: absolute;
+  left: -999px;
+}
+
+/* input[name="search"] { */
+/*   font-size: 1rem; */
+/*   padding: .5rem 1rem; */
+/* } */
+
+h1 {
+  font-size: 2rem;
+  padding: .5em 0 1em;
+}
+
+h2 {
+  font-size: 1.2rem;
+  padding-bottom: .4em;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+li {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 300px;
+  padding: .5em;
+  background-color: #eee;
+  border: 2px solid gray;
+  border-radius: .5em;
+  margin: 1em;
+}
+
+li div.actions {
+  position: absolute;
+  display: flex;
+  top: 5px;
+  right: 5px;
+}
+
+li .actions img {
+  margin-left: .5em;
+  height: 1.5em;
+  width: 1.5em;
+}
+
+
+dl {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  margin-bottom: .5em;
+}
+
+dt {
+  display: block;
+  font-weight: bold;
+  padding: 0 1em .2em 0;
+}
+
+dt::after {
+  content: ":";
+}
+
+dd {
+  display: block;
+}
+
+div.tags {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: .3em
+}
+
+div.tag {
+  display: block;
+  background-color: #fbb;
+  padding: .2em .5em;
+  border-radius: .2em;
+}
+
+div.tag + div.tag {
+  margin-left: .5em;
+}
+
+#add-contact-layer {
+  position: fixed;
+  display: none;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  background: rgba(0, 0, 0, .3);
+}
+
+#form-container {
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  z-index: 3;
+  width: 660px;
+  padding: 20px;
+  margin: 0 0 0 -330px;
+  text-align: left;
+  background: #ffffff;
+  transition: visibility 0.3s, opacity 0.3s;
+}
+
+#form-container form {
+  width: 100%;
+}
+
+#form-container dt {
+  width: 200px;
+  display: block;
+  white-space: no-wrap;
+}
+
+#form-container input[type="text"] {
+  width: 100%;
+}
+
+footer {
+  padding-bottom: 5px;
+  width: 100%;
+  background-color: #f0f0f0;
+  bottom: 0;
+  font: 12px grey;
+}
