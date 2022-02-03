@@ -79,11 +79,13 @@ class ListView {
   }
 
   handleEdit(event) {
+    event.preventDefault()
     const $item = $(event.currentTarget).closest('li');
     this.app.edit($item.data('contact'));
   }
 
   handleDelete(event) {
+    event.preventDefault()
     const id = event.currentTarget.dataset.id;
     const name = event.currentTarget.closest('li').querySelector('.name').textContent;
     if(confirm(`Delete ${name} from your contacts?`)) {
@@ -103,13 +105,13 @@ class ListView {
     $old.replaceWith($updated);
   }
 
-  filterOnName(searchCriteria) {
-
-  }
-
-  filterOnTag(searchCriteria) {
-
-  }
+  // filterOnName(searchCriteria) {
+  //
+  // }
+  //
+  // filterOnTag(searchCriteria) {
+  //
+  // }
 }
 
 export { ListView };
